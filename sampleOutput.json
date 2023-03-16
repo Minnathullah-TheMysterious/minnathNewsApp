@@ -1,0 +1,45 @@
+{
+    "status": "ok",
+    "totalResults": 3,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "The Indian Express"
+            },
+            "author": "The Indian Express",
+            "title": "‘I was desperate to get to the three-figure mark’: Virat Kohli on ending his century drought in Test cricket - The Indian Express",
+            "description": null,
+            "url": "https://indianexpress.com/article/sports/cricket/i-was-desperate-to-get-to-the-three-figure-mark-virat-kohli-on-ending-his-century-drought-in-test-cricket-8495551/",
+            "urlToImage": null,
+            "publishedAt": "2023-03-14T04:38:27Z",
+            "content": null
+        },
+        {
+            "source": {
+                "id": "the-times-of-india",
+                "name": "The Times of India"
+            },
+            "author": "Ehtesham Hasan",
+            "title": "WTC Final: Rohit Sharma, Rahul Dravid ponder the challenges - Indiatimes.com",
+            "description": "Cricket News: With there just being a week-long gap between the IPL final and World Test Championship Final, captain Rohit Sharma said that there will be appropriat",
+            "url": "https://timesofindia.indiatimes.com/sports/cricket/australia-in-india/wtc-final-rohit-sharma-rahul-dravid-ponder-the-challenges/articleshow/98620406.cms",
+            "urlToImage": "https://static.toiimg.com/thumb/msid-98620389,width-1070,height-580,imgsize-32802,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+            "publishedAt": "2023-03-14T03:04:00Z",
+            "content": ""
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Hindustan Times"
+            },
+            "author": "HT Sports Desk",
+            "title": "‘They mostly knock us out…’: Dravid reveals ‘stressed’ moments during NZ vs SL - Hindustan Times",
+            "description": "Sri Lanka needed nothing less than a win to remain alive in the WTC 2023 final race and despite putting in their best effort Dimuth Karunaratne and Co. were humbled by a match-winning effort by Kane Williamson. | Cricket",
+            "url": "https://www.hindustantimes.com/cricket/new-zealand-mostly-knock-us-out-of-icc-events-dravid-says-indian-dressing-room-was-stressed-seeing-williamson-chase-target-vs-sri-lanka-101678734396809.html",
+            "urlToImage": "https://www.hindustantimes.com/ht-img/img/2023/03/13/1600x900/PTI02-08-2023-000054B-0_1678749066103_1678749066103_1678749098916_1678749098916.jpg",
+            "publishedAt": "2023-03-14T01:52:48Z",
+            "content": "As a draw looked inevitable in the fourth and final Test between India and Australia in Ahmedabad, many Indian fans were glued to their mobile and TV screens, eagerly following the proceedings in Chr… [+3014 chars]"
+        }
+    ]
+}
