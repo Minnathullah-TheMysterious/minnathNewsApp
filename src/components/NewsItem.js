@@ -8,7 +8,7 @@ export class NewsItem extends Component {
       <div>
         <div className="card my-4">
           <span
-            class="position-absolute top-0 translate-middle badge rounded-pill bg-success"
+            className="position-absolute top-0 translate-middle badge rounded-pill bg-success"
             style={{ zIndex: 1, left: "90%" }}
           >
             {source}
@@ -18,7 +18,7 @@ export class NewsItem extends Component {
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
             <p className="card-text">
-              <small className="text-muted">
+              <small className="text-danger">
                 By "{author ? author : "Unknown"}" on{" "}
                 {new Date(date).toGMTString()}
               </small>
