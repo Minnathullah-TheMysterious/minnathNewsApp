@@ -14,7 +14,6 @@ export default class App extends Component {
   }
 
   handleToggleMode = () => {
-    // console.log("toggleMode");
     if (this.state.mode === "light") {
       this.setState({
         mode: "dark",
@@ -28,9 +27,15 @@ export default class App extends Component {
     }
   };
 
+  handleCountryCode = () => {
+    console.log('ae')
+  };
+  
+
   pageSize = 6;
   apiKey = "45890530df224bbab7fded0071ee7eac";
   country = "in";
+  q="cricket"
 
   render() {
     return (
@@ -41,6 +46,7 @@ export default class App extends Component {
             mode={this.state.mode}
             toggleMode={this.handleToggleMode}
             text={this.state.text}
+            countryCode={this.handleCountryCode}
           />
           <Routes>
             <Route
@@ -52,6 +58,7 @@ export default class App extends Component {
                   country={this.country}
                   category="general"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="general" //a unique key is required for remounting the componenet
                 />
               }
@@ -65,6 +72,7 @@ export default class App extends Component {
                   country={this.country}
                   category="business"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="business"
                 />
               }
@@ -78,6 +86,7 @@ export default class App extends Component {
                   country={this.country}
                   category="entertainment"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="entertainment"
                 />
               }
@@ -91,6 +100,7 @@ export default class App extends Component {
                   country={this.country}
                   category="health"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="health"
                 />
               }
@@ -104,6 +114,7 @@ export default class App extends Component {
                   country={this.country}
                   category="science"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="science"
                 />
               }
@@ -117,6 +128,7 @@ export default class App extends Component {
                   country={this.country}
                   category="sports"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="sports"
                 />
               }
@@ -130,6 +142,7 @@ export default class App extends Component {
                   country={this.country}
                   category="technology"
                   apiKey={this.apiKey}
+                  q={this.q}
                   key="technology"
                 />
               }

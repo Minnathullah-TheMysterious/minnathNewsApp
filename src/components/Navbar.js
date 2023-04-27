@@ -1,67 +1,124 @@
-import React, { Component } from "react";
+import React, { Component, useInsertionEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default class Navbar extends Component {
+export default class Navbar extends Component {  
+
   render() {
-    let { title, mode, toggleMode, text } = this.props;
+    let { title, mode, toggleMode, text, countryCode } = this.props;
 
     return (
-      <div>
-        <nav
-          className="navbar navbar-expand-lg bg-body-tertiary"
-          data-bs-theme={mode}
-        >
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              {title}
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
-                <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
-              </ul>
-              <div className="form-check form-switch">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault"
-                  onClick={toggleMode}
-                />
-                <label
-                  className={`form-check-label text-${text}`}
-                  htmlFor="flexSwitchCheckDefault"
+      <nav
+        className="navbar navbar-expand-lg bg-body-tertiary"
+        data-bs-theme={mode}
+      >
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+            {title}
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/business">
+                  Business
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/entertainment">
+                  Entertainment
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/health">
+                  Health
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/science">
+                  Science
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sports">
+                  Sports
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/technology">
+                  Technology
+                </Link>
+              </li>
+            </ul>
+            <form className="d-flex" role="search">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                id="searchInput"
+              />
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <ul className="navbar-nav">
+              <li className="nav-item dropdown">
+                <button
+                  className="btn btn-light dropdown-toggle mx-2"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  type="button"
                 >
-                  Enable DarkMode
-                </label>
-              </div>
+                  Country
+                </button>
+                <ul
+                  className="dropdown-menu dropdown-menu-light"
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "6px",
+                    height: "200px",
+                    overflowY: "scroll",
+                  }}   
+                >
+                  <li className="dropdown-item" onClick={countryCode}>
+                    UAE
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick={toggleMode}
+              />
+              <label
+                className={`form-check-label text-${text}`}
+                htmlFor="flexSwitchCheckDefault"
+              >
+                Enable DarkMode
+              </label>
             </div>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 }
